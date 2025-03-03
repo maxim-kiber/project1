@@ -1,17 +1,18 @@
 :root {
     font-size: 62.5%; 
-    --primary: #00C7B7;
-    --secondary: #FF6B6B;
-    --text: #E0E0E0;
-    --bg: #1A1A1A;
-    --link: #00C7B7;
+    --primary: #2C3930;
+    --bg: #3F4F44;
+    --secondary: #A27B5C;
+    --text: #FFFFFF;
+    --text2:#000000;
+    --link: #DCD7C9;
     --radius: 0.5rem;
     --shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 body {
     font: 1.6rem/1.5 'Roboto', 'Open Sans', sans-serif;
-    color: var(--text);
+    color: var(--text2);
     background: var(--bg);
     margin: 0;
     min-height: 100vh;
@@ -31,6 +32,7 @@ header {
 }
 
 header h1 {
+    color: var(--text);
     text-align: center;
     margin: 0 0 2rem;
     font-size: 2.4rem;
@@ -78,6 +80,7 @@ blockquote {
 
 a[href^="mailto"],
 a[href^="tel"] {
+
     display: block;
     margin: 1rem 0;
 }
@@ -115,6 +118,7 @@ button:hover {
 }
 
 footer {
+    color: var(--text);
     background: var(--primary);
     padding: 3rem 0;
     text-align: center;
