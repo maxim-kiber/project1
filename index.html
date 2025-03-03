@@ -1,71 +1,97 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Мой сайт</title>
-    </head>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой сайт</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans&display=swap">
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
-    <body>
-        <header>
-            <h1>Главная страница</h1>
-            <nav>
-                <ul>
-                    <li><a href="">Галерея</a></li>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="header__title">Главная страница</h1>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="gallery.html" class="nav__link">Галерея</a></li>
                 </ul>
             </nav>
-            <hr>
-        </header>
-    
-        <main>
-            <h2>О сайте</h2>
-            <p>Этот сайт созданной мной в рамках проекта "Киберполигон", и здесь содержится основная информация обо мне.</p>
-            <section>
-                <h2>Основная информация</h2>
-                <p>Меня зовут Товстоган Максим</p>
-                <p>Дата рождения: 30.04.2006г (скоро 19 годиков стукнет)</p>
-                <p>Родился и прожил 18 лет в городе Саратов</p>
-            </section>
-            <section>
-                <h2>Образование</h2>
-                <p>На данный момент получаю высшее образование в Московском Политихническом университете:</p>
-                <ul>
-                    <li>Направление - "Информатика и вычислительная техника"</li>
-                    <li>Специализация - "Интелектуальные беспилотные системы"</li>
-                    <li>Группа 241-325</li>   
-                </ul>
-             
+            <hr class="divider">
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <section class="section">
+                <h2 class="section__title">О сайте</h2>
+                <p class="section__text">Этот сайт создан мной в рамках проекта "Киберполигон", и здесь содержится основная информация обо мне.</p>
             </section>
 
-            <section>
-                <h2>Любимая Цитата</h2>
-                <blockquote><q>Просто ты куришь, потому что тебе это доставляет удовольствие. А я – потому что хочу умереть.</q></blockquote>
-                <p> Цитата из книги <q>В поисках Аляски</q>. Джон Грин. </p> 
+            <section class="section">
+                <h2 class="section__title">Основная информация</h2>
+                <div class="card">
+                    <p class="card__text">Меня зовут Товстоган Максим</p>
+                    <p class="card__text">Дата рождения: 30.04.2006г (скоро 19 годиков стукнет)</p>
+                    <p class="card__text">Родился и прожил 18 лет в городе Саратов</p>
+                </div>
             </section>
 
-            <section>
-                <h2>Контакты</h2>
-                    <a href="mailto:tovstogan.maks@gmail.com">tovstogan.maks@gmail.com</a>
-                    <p></p>
-                    <a href="tel:+79873879233">+7 (987) 387-92-33</a>.
+            <section class="section">
+                <h2 class="section__title">Образование</h2>
+                <div class="card">
+                    <p class="card__text">На данный момент получаю высшее образование в Московском Политехническом университете:</p>
+                    <ul class="card__list">
+                        <li class="card__list-item">Направление - "Информатика и вычислительная техника"</li>
+                        <li class="card__list-item">Специализация - "Интеллектуальные беспилотные системы"</li>
+                        <li class="card__list-item">Группа 241-325</li>
+                    </ul>
+                </div>
             </section>
 
-            <section>
-                <h2>Обратная связь</h2>
-                <form action="/submit" method="post">
-                    <label for="name">Имя:</label>
-                    <input type="text" id="name" name="name" required>
-                    <br>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                    <br>
-                    <button type="submit">Отправить</button>
-                    <hr>
-                </form>
+            <section class="section">
+                <h2 class="section__title">Любимая Цитата</h2>
+                <div class="card">
+                    <blockquote class="quote">
+                        <q class="quote__text">Просто ты куришь, потому что тебе это доставляет удовольствие. А я – потому что хочу умереть.</q>
+                    </blockquote>
+                    <p class="quote__author">Цитата из книги <q>В поисках Аляски</q>. Джон Грин.</p>
+                </div>
             </section>
-        </main>
 
-    <footer>
-        <p>2025г</p>
+            <section class="section">
+                <h2 class="section__title">Контакты</h2>
+                <div class="card">
+                    <a href="mailto:tovstogan.maks@gmail.com" class="contact-link">tovstogan.maks@gmail.com</a>
+                    <a href="tel:+79873879233" class="contact-link">+7 (987) 387-92-33</a>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section__title">Обратная связь</h2>
+                <div class="card">
+                    <form class="form" action="/submit" method="post">
+                        <div class="form__group">
+                            <label class="form__label" for="name">Имя:</label>
+                            <input class="form__input" type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form__group">
+                            <label class="form__label" for="email">Email:</label>
+                            <input class="form__input" type="email" id="email" name="email" required>
+                        </div>
+                        <button class="button" type="submit">Отправить</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <hr class="divider">
+            <p class="footer__copyright">2025г</p>
+        </div>
     </footer>
-
-    </body>
+</body>
 </html>
