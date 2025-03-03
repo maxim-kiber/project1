@@ -6,6 +6,7 @@
     --text: #FFFFFF;
     --text2:#000000;
     --link: #DCD7C9;
+    --hover-link: #b6b2a9;
     --radius: 0.5rem;
     --shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
@@ -35,7 +36,8 @@ header h1 {
     color: var(--text);
     text-align: center;
     margin: 0 0 2rem;
-    font-size: 2.4rem;
+    font-size: 3rem;
+    letter-spacing: 15px;
 }
 
 nav ul {
@@ -49,8 +51,15 @@ nav ul {
 nav a {
     color: var(--link);
     font-weight: 700;
+    text-decoration: none;
+    transition-duration: 0.5s;
 }
 
+.nav__link:hover {
+    color: var(--hover-link);
+    transition-duration: 0.5s;
+    font-size: 110%;
+}
 
 main {
     flex: 1;
@@ -59,7 +68,7 @@ main {
 
 section {
     margin: 3rem 0;
-    background: white;
+    background: var(--link);
     padding: 2rem;
     border-radius: var(--radius);
     box-shadow: var(--shadow);
@@ -124,8 +133,31 @@ footer {
     text-align: center;
 }
 
-hr {
+hr.divider {
     border: none;
-    border-top: 2px solid var(--secondary);
+    border-top: 3px solid var(--secondary);
     margin: 2rem 0;
+}
+
+.gallery-row {
+    margin-top: 50px;
+    width: 900px;
+    height: 450px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.gallery-row img {
+    width: 400px;
+    height: 400px;
+    transition-duration: 1.8s;
+}
+
+.gallery-row img:hover {
+    transition-duration: 1.8s;
+    transform: rotate(360deg);
+}
+
+.mbappe-png {
+    background-color: var(--link);
 }
